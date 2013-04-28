@@ -98,9 +98,11 @@ static inline BOOL LoadColor(UIColor **newColor)
 
 - (void)applyEmphasizeSettings
 {
-	[self setTintColor:objc_getAssociatedObject(self, &originalColorKey)];
-	[self setBackgroundImage:objc_getAssociatedObject(self, &originalBackgroundKey) forBarMetrics:UIBarMetricsDefault];
-	[self setBackgroundImage:objc_getAssociatedObject(self, &originalBackgroundAlternateKey) forBarMetrics:UIBarMetricsLandscapePhone];
+	[UIView transitionWithView:self duration:1.0 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+		[self setTintColor:objc_getAssociatedObject(self, &originalColorKey)];
+		[self setBackgroundImage:objc_getAssociatedObject(self, &originalBackgroundKey) forBarMetrics:UIBarMetricsDefault];
+		[self setBackgroundImage:objc_getAssociatedObject(self, &originalBackgroundAlternateKey) forBarMetrics:UIBarMetricsLandscapePhone];
+	} completion:NULL];
 }
 
 @end
@@ -182,7 +184,9 @@ static inline BOOL LoadColor(UIColor **newColor)
 
 - (void)applyEmphasizeSettings
 {
-	[self setTintColor:objc_getAssociatedObject(self, &originalColorKey)];
+	[UIView transitionWithView:self duration:1.0 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+		[self setTintColor:objc_getAssociatedObject(self, &originalColorKey)];
+	} completion:NULL];
 }
 
 @end
@@ -203,7 +207,9 @@ static inline BOOL LoadColor(UIColor **newColor)
 
 - (void)applyEmphasizeSettings
 {
-	[self setTintColor:objc_getAssociatedObject(self, &originalColorKey)];
+	[UIView transitionWithView:self duration:1.0 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+		[self setTintColor:objc_getAssociatedObject(self, &originalColorKey)];
+	} completion:NULL];
 }
 
 @end
@@ -224,7 +230,9 @@ static inline BOOL LoadColor(UIColor **newColor)
 
 - (void)applyEmphasizeSettings
 {
-	[self setOnTintColor:objc_getAssociatedObject(self, &originalColorKey)];
+	[UIView transitionWithView:self duration:1.0 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+		[self setOnTintColor:objc_getAssociatedObject(self, &originalColorKey)];
+	} completion:NULL];
 }
 
 @end
@@ -245,7 +253,9 @@ static inline BOOL LoadColor(UIColor **newColor)
 
 - (void)applyEmphasizeSettings
 {
-	[self setTintColor:objc_getAssociatedObject(self, &originalColorKey)];
+	[UIView transitionWithView:self duration:1.0 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+		[self setTintColor:objc_getAssociatedObject(self, &originalColorKey)];
+	} completion:NULL];
 }
 
 @end
