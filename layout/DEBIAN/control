@@ -1,6 +1,6 @@
 Package: com.rpetrich.emphasize
 Name: Emphasize
-Version: 0.1
+Version: 0.2
 Architecture: iphoneos-arm
 Description: Customizable control color schemes
 Maintainer: Ryan Petrich <rpetrich+emphasize@gmail.com>
