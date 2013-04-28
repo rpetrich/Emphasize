@@ -63,6 +63,9 @@ static inline BOOL LoadColor(UIColor **newColor)
 			case 15:
 				*newColor = HEX_COLOR(0xd80073);
 				break;
+			case 16:
+				*newColor = HEX_COLOR(0xee573e);
+				break;
 		}
 	}
 	return setting != 0;
