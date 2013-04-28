@@ -1,0 +1,60 @@
+entry = {
+  bundle = AppList;
+  cell = PSLinkCell;
+  icon = "/System/Library/PreferenceBundles/Wallpaper.bundle/icon.png";
+  isController = 1;
+  label = Emphasize;
+  ALSettingsPath = "/var/mobile/Library/Preferences/com.rpetrich.emphasize.plist";
+  ALSettingsKeyPrefix = "AppColor-";
+  ALChangeNotification = "com.rpetrich.fullforce.settingschanged";
+  ALSettingsDefaultValue = "";
+  ALAllowsSelection = 1;
+  ALSectionDescriptors = (
+    {
+      items = (
+        {
+          text = "Default";
+          "cell-class-name" = "ALDisclosureIndicatedCell";
+          action = "showPreferences";
+          entry = {
+            PostNotification = "com.rpetrich.emphasize.settingschanged";
+            cell = PSLinkListCell;
+            default = 0;
+            defaults = "com.rpetrich.emphasize";
+            detail = PSListItemsController;
+            key = "DefaultColor";
+            validTitles = ("App Default","iOS Standard","Graphite","Butter","Orange","Chocolate","Chameleon","Sky Blue","Plum","Scarlet Red","Viridian","Olive","Steel","Sienna","Watercolor","Hot Pink");
+            validValues = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);
+            bundle = "AppList";
+            isController = 1;
+            overridePrincipalClass = 1;
+          };
+        }
+      );
+    },
+    {
+      predicate = "NOT (displayIdentifier IN {'com.cydia.saurik','com.iptm.bigboss.sbsettings','com.booleanmagic.overboard','eu.heinelt.ifile'})";
+      "cell-class-name" = "ALDisclosureIndicatedCell";
+      "icon-size" = 29;
+      "suppress-hidden-apps" = 1;
+      action = "showPreferences";
+      "display-identifier-macro" = "@@DISPLAYIDENTIFIER@@";
+      validTitles = ("","iOS Standard","Graphite","Butter","Orange","Chocolate","Chameleon","Sky Blue","Plum","Scarlet Red","Viridian","Olive","Steel","Sienna","Watercolor","Hot Pink");
+      validValues = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);
+      entry = {
+        PostNotification = "com.rpetrich.emphasize.settingschanged";
+        cell = PSLinkListCell;
+        default = 0;
+        defaults = "com.rpetrich.emphasize";
+        detail = PSListItemsController;
+        key = "AppColor-@@DISPLAYIDENTIFIER@@";
+        validTitles = ("Default","iOS Standard","Graphite","Butter","Orange","Chocolate","Chameleon","Sky Blue","Plum","Scarlet Red","Viridian","Olive","Steel","Sienna","Watercolor","Hot Pink");
+        validValues = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);
+        bundle = "AppList";
+        isController = 1;
+        overridePrincipalClass = 1;
+      };
+      "footer-title" = "© 2013 Ryan Petrich";
+    }
+  );
+};

@@ -1,0 +1,13 @@
+Package: com.rpetrich.emphasize
+Name: Emphasize
+Version: 0.1
+Architecture: iphoneos-arm
+Description: Customizable control color schemes
+Maintainer: Ryan Petrich <rpetrich+emphasize@gmail.com>
+Author: Ryan Petrich <rpetrich+emphasize@gmail.com>
+Depends: mobilesubstrate, firmware (>= 5.0), applist (>= 1.5.3)
+Section: Tweaks
+Website: http://rpetri.ch/cydia/emphasize/
+Depiction: http://rpetri.ch/cydia/emphasize/
+Icon: file:///System/Library/PreferenceBundles/Wallpaper.bundle/icon.png
+dev: rpetrich
