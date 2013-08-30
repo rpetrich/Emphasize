@@ -33,7 +33,7 @@ entry = {
       );
     },
     {
-      predicate = "NOT (displayIdentifier IN {'com.cydia.saurik','com.iptm.bigboss.sbsettings','com.booleanmagic.overboard','eu.heinelt.ifile'})";
+      predicate = "NOT (displayIdentifier IN {'com.saurik.Cydia','com.iptm.bigboss.sbsettings','com.booleanmagic.overboard','eu.heinelt.ifile'})";
       "cell-class-name" = "ALDisclosureIndicatedCell";
       "icon-size" = 29;
       "suppress-hidden-apps" = 1;
